@@ -1,4 +1,4 @@
-export type SupportedKeys = "w" | "a" | "s" | "d" | "f" | "g" | "h" | "j";
+export type SupportedKeys = "w" | "a" | "s" | "d" | "ArrowUp" | "ArrowDown" | "ArrowRight" | "ArrowLeft";
 
 export type GameKeyboardMapping = {
     direction: {
@@ -8,10 +8,10 @@ export type GameKeyboardMapping = {
         right: SupportedKeys[]
     },
     buttons: {
-        primary: SupportedKeys[],
-        secondary: SupportedKeys[],
-        button3: SupportedKeys[],
-        button4: SupportedKeys[],
+        north: SupportedKeys[],
+        south: SupportedKeys[],
+        east: SupportedKeys[],
+        west: SupportedKeys[],
     };
 };
 
@@ -41,10 +41,10 @@ export type StandardGameInput = {
         }
     },
     actions: {
-        primary: ButtonState,
-        secondary: ButtonState,
-        button3: ButtonState,
-        button4: ButtonState
+        north: ButtonState,
+        south: ButtonState,
+        east: ButtonState,
+        west: ButtonState
     };
 };
 

@@ -5,7 +5,7 @@ export class KeyboardManager {
     static keyboardState: KeyboardState = KeyboardStateNeutral;
 
     private static isSupportedKey(key: string): key is SupportedKeys {
-        return (key === "w" || key === "a" || key === "s" || key === "d" || key === "f" || key === "g" || key === "h" || key === "j"  || key === "ArrowUp" || key === "ArrowDown" || key === "ArrowRight" || key === "ArrowLeft");
+        return (key === "w" || key === "a" || key === "s" || key === "d" || key === "ArrowUp" || key === "ArrowDown" || key === "ArrowRight" || key === "ArrowLeft");
     }
 
     private static keyDown = (event: KeyboardEvent) => {

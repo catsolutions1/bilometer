@@ -25,10 +25,10 @@ export class KeyboardTransformer {
         const downActive = KeyboardTransformer.getButtonState(playerKeyMappings.direction.down, keyboard);
         const leftActive = KeyboardTransformer.getButtonState(playerKeyMappings.direction.left, keyboard);
         const rightActive = KeyboardTransformer.getButtonState(playerKeyMappings.direction.right, keyboard);
-        const primaryActive = KeyboardTransformer.getButtonState(playerKeyMappings.buttons.primary, keyboard);
-        const secondaryActive = KeyboardTransformer.getButtonState(playerKeyMappings.buttons.secondary, keyboard);
-        const button3Active = KeyboardTransformer.getButtonState(playerKeyMappings.buttons.button3, keyboard);
-        const button4Active = KeyboardTransformer.getButtonState(playerKeyMappings.buttons.button4, keyboard);
+        const northActive = KeyboardTransformer.getButtonState(playerKeyMappings.buttons.north, keyboard);
+        const southActive = KeyboardTransformer.getButtonState(playerKeyMappings.buttons.south, keyboard);
+        const eastActive = KeyboardTransformer.getButtonState(playerKeyMappings.buttons.east, keyboard);
+        const westActive = KeyboardTransformer.getButtonState(playerKeyMappings.buttons.west, keyboard);
 
         const x = KeyboardTransformer.resolveAxisState(leftActive, rightActive);
         const y = KeyboardTransformer.resolveAxisState(upActive, downActive);
@@ -41,10 +41,10 @@ export class KeyboardTransformer {
                 }
             },
             actions: {
-                primary: primaryActive,
-                secondary: secondaryActive,
-                button3: button3Active,
-                button4: button4Active
+                north: northActive,
+                south: southActive,
+                east: eastActive,
+                west: westActive
             }
         };
     }

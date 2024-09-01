@@ -8,10 +8,10 @@ export const KeyboardMappingNeutral: GameKeyboardMapping = {
         left: ["a"]
     },
     buttons: {
-        primary: ["f"],
-        secondary: ["g"],
-        button3: ["h"],
-        button4: ["j"]
+        north: ["ArrowUp"],
+        south: ["ArrowDown"],
+        east: ["ArrowRight"],
+        west: ["ArrowLeft"]
     }
 }
 
@@ -20,10 +20,10 @@ export const KeyboardStateNeutral: KeyboardState = {
   a: "not-pressed",
   s: "not-pressed",
   d: "not-pressed",
-  f: "not-pressed",
-  g: "not-pressed",
-  h: "not-pressed",
-  j: "not-pressed"
+  ArrowUp: "not-pressed",
+  ArrowDown: "not-pressed",
+  ArrowRight: "not-pressed",
+  ArrowLeft: "not-pressed"
 }
 
 export const StandardGameInputStateNeutral: StandardGameInput = {
@@ -34,9 +34,9 @@ export const StandardGameInputStateNeutral: StandardGameInput = {
         },
     },
     actions: {
-        primary: "not-pressed",
-        secondary: "not-pressed",
-        button3: "not-pressed",
-        button4: "not-pressed"
+        north: "not-pressed",
+        south: "not-pressed",
+        east: "not-pressed",
+        west: "not-pressed"
     }
 }

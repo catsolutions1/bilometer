@@ -1,7 +1,7 @@
 import { KeyboardStateNeutral } from "./Constants.js";
 export class KeyboardManager {
     static isSupportedKey(key) {
-        return (key === "w" || key === "a" || key === "s" || key === "d" || key === "f" || key === "g" || key === "h" || key === "j" || key === "ArrowUp" || key === "ArrowDown" || key === "ArrowRight" || key === "ArrowLeft");
+        return (key === "w" || key === "a" || key === "s" || key === "d" || key === "ArrowUp" || key === "ArrowDown" || key === "ArrowRight" || key === "ArrowLeft");
     }
     constructor() {
         window.addEventListener("keydown", KeyboardManager.keyDown);

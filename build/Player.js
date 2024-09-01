@@ -7,10 +7,10 @@ Player.getPlayerState = (gameInput, currentState) => {
             horizontal: gameInput.axis.discrete.x,
             vertical: gameInput.axis.discrete.y
         },
-        bottom: gameInput.actions.primary === "pressed",
-        right: gameInput.actions.secondary === "pressed",
-        left: gameInput.actions.button3 === "pressed",
-        top: gameInput.actions.button4 === "pressed",
+        top: gameInput.actions.north === "pressed",
+        bottom: gameInput.actions.south === "pressed",
+        right: gameInput.actions.east === "pressed",
+        left: gameInput.actions.west === "pressed",
     };
 };
 Player.updatePlayerPosition = (position, direction) => {
