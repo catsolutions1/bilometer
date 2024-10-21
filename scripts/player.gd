@@ -8,7 +8,7 @@ var velocity: Vector2 = Vector2.ZERO
 func _ready():
 	pass
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	get_input()
 	move()
 

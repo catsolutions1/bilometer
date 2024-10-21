@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/barrier.png-9dafd7000044d9ef29c2e4c3c4e984b9.stex"
+path="res://.import/girlypop_pointing.png-e470179398bf5b795f1337f79dde7e6c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/barrier.png"
-dest_files=[ "res://.import/barrier.png-9dafd7000044d9ef29c2e4c3c4e984b9.stex" ]
+source_file="res://assets/ui/girlypop_pointing.png"
+dest_files=[ "res://.import/girlypop_pointing.png-e470179398bf5b795f1337f79dde7e6c.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0
