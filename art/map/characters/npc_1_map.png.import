@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/girlypop_pointing.png-e470179398bf5b795f1337f79dde7e6c.stex"
+path="res://.import/npc_1_map.png-ec4f2a54a9d493e28a85a6a37d46d866.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/girlypop_pointing.png"
-dest_files=[ "res://.import/girlypop_pointing.png-e470179398bf5b795f1337f79dde7e6c.stex" ]
+source_file="res://art/map/characters/npc_1_map.png"
+dest_files=[ "res://.import/npc_1_map.png-ec4f2a54a9d493e28a85a6a37d46d866.stex" ]
 
 [params]
 

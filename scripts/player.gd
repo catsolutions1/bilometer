@@ -1,23 +1,23 @@
-extends KinematicBody2D
+extends Area2D
 
-export(int) var acceleration: int = 400
-
-var move_direction: Vector2 = Vector2.ZERO
-var velocity: Vector2 = Vector2.ZERO
+export(int) var tile_size: int = 64
+var inputs = {"ui_right": Vector2.RIGHT,
+			"ui_left": Vector2.LEFT,
+			"ui_up": Vector2.UP,
+			"ui_down": Vector2.DOWN}
+onready var ray = $RayCast2D
 
 func _ready():
-	pass
+	position = position.snapped(Vector2.ONE * tile_size)
+	position += Vector2.ONE * tile_size/2
 
-func _physics_process(_delta):
-	get_input()
-	move()
+func _unhandled_input(event):
+	for direction in inputs.keys():
+		if event.is_action_pressed(direction):
+			move(direction)
 
-func get_input() -> void:
-	move_direction = Vector2.ZERO
-	move_direction.x = Input.get_axis("ui_left", "ui_right")
-	move_direction.y = Input.get_axis("ui_up", "ui_down")
-
-func move() -> void:
-	move_direction = move_direction.normalized()
-	velocity = move_direction * acceleration
-	move_and_slide(velocity)
+func move(direction):
+	ray.cast_to = inputs[direction] * (tile_size / 8 + 1)
+	ray.force_raycast_update()
+	if !ray.is_colliding():
+		position += inputs[direction] * tile_size

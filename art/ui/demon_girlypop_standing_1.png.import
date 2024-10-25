@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/girlypop_yippee.png-79d4916776d8884884274058f71d7669.stex"
+path="res://.import/demon_girlypop_standing_1.png-e9a18b2fc0aa5a0e98ea4a4ed2dca1a0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/girlypop_yippee.png"
-dest_files=[ "res://.import/girlypop_yippee.png-79d4916776d8884884274058f71d7669.stex" ]
+source_file="res://art/ui/demon_girlypop_standing_1.png"
+dest_files=[ "res://.import/demon_girlypop_standing_1.png-e9a18b2fc0aa5a0e98ea4a4ed2dca1a0.stex" ]
 
 [params]
 
