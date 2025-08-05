@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/player.gd" type="Script" id=1]
+[ext_resource path="res://assets/wizard.png" type="Texture" id=2]
+[ext_resource path="res://assets/wizard_staff.png" type="Texture" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 9.0
+height = 16.0
+
+[sub_resource type="CapsuleShape2D" id=2]
+height = 16.0
+
+[node name="player" type="KinematicBody2D"]
+scale = Vector2( 4, 4 )
+z_index = 1
+collision_layer = 2
+collision_mask = 13
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Node2D" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Position2D" type="Position2D" parent="Node2D"]
+position = Vector2( 11, 0 )
+
+[node name="Sprite" type="Sprite" parent="Node2D/Position2D"]
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="player_collider" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_collider"]
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="player_collider" to="." method="_on_player_collider_body_entered"]

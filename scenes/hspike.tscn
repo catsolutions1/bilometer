@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/hspike.gd" type="Script" id=1]
+[ext_resource path="res://assets/spike.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 32.0
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 34.0
+
+[node name="hspike" type="KinematicBody2D" groups=["enemy"]]
+collision_layer = 4
+collision_mask = 7
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+self_modulate = Color( 0.433179, 0.449219, 0.243912, 1 )
+texture = ExtResource( 2 )
+
+[node name="hspike_collider" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hspike_collider"]
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="hspike_collider" to="." method="_on_hspike_collider_body_entered"]
